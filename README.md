@@ -1,78 +1,33 @@
 # cordova-plugin-crop
 
-> Crop an image in a Cordova app
+> Add any gradle dependency to the main project
 
 
 ## Install
 
 ```
-$ cordova plugin add --save https://github.com/bidchatindia/Bidchat-Plugin-ImageCrop.git
+$ cordova plugin add --save https://github.com/rahul-bidchat/Bidchat-plugin-gradle.git
 ```
 
 
 ## Usage
-
-```js
-plugins.crop(function success () {
-
-}, function fail () {
-
-}, '/path/to/image', options)
-```
-
-## API
-
- * quality: Number
-
-The resulting JPEG quality. default: 100
-
- * imageHeight: Number
-
-The Crop Rectangle Height.
+ To use this plugin once you have added the plugin make sure that you change the build-extras.gradle. You can include any libraries as you would do in native android gradle file.
+ Next time when we build the project, the build-extras.gradle and projects build.gradle will be merged. Now we have a single file with all dependecies merged
 
 ### Example 
 
-```js
-function cropImage(imagePath) {
-    
-    var onSucess = function(message) {
-        alert("Crop Success : " + message);
-        setPicture(message);
-    };
-    
-    var onFailure = function(message) {
-        alert("Crop Failed with error" + message.code);
-    };
-    
-    var options = { 
-       imageHeight : 300
-    };
-    
-    plugins.crop(onSucess, onFailure, imagePath, options);
+```gradle
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.plattysoft.leonids:LeonidsLib:1.3.2'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
 }
 ```
-
-### For Android-Cordova
-In case you get this error "Error: Width (0) and height (0) cannot be <= 0" add the following to gradle
-
-
- android {  
-   defaultConfig {  
-     generatedDensities = []  
-  }  
-
-  // This is handled for you by the 2.0+ Gradle Plugin  
-  aaptOptions {  
-    additionalParameters "--no-version-vectors"  
-  }  
- }
-
- https://github.com/Yalantis/uCrop/issues/84
-
-### Libraries used
-
- * iOS: [PEPhotoCropEditor](https://github.com/kishikawakatsumi/PEPhotoCropEditor)
- * Android: [uCrop](https://github.com/Yalantis/uCrop)
 
 ## License
 
