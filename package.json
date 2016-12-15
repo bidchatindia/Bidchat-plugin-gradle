@@ -1,16 +1,16 @@
 {
-  "name": "bidchat-plugin-imagecrop",
+  "name": "bidchat-plugin-gradle",
   "version": "1.0.0",
-  "description": "Crop an image in a Cordova app",
+  "description": "Add Gradle Dependencies",
   "cordova": {
-    "id": "bidchat-plugin-imagecrop",
+    "id": "bidchat-plugin-gradle",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bidchatindia/Bidchat-Plugin-ImageCrop.git"
+    "url": "https://github.com/bidchatindia/Bidchat-plugin-gradle.git"
   },
   "keywords": [
     "cordova",

@@ -11,8 +11,10 @@ $ cordova plugin add --save https://github.com/bidchatindia/Bidchat-plugin-gradl
 
 
 ## Usage
- To use this plugin once you have added the plugin make sure that you change the build-extras.gradle. You can include any libraries as you would do in native android gradle file.
- Next time when we build the project, the build-extras.gradle and projects build.gradle will be merged. Now we have a single file with all dependecies merged
+ To use this plugin once you have added the plugin make sure that you change the build-extras.gradle. 
+ You can include any libraries as you would do in native android gradle file.
+ Next time when we build the project, the build-extras.gradle and projects build.gradle will be merged. 
+ Now we have a single file with all dependecies merged
 
 ### Example 
 
