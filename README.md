@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ cordova plugin add --save https://github.com/rahul-bidchat/Bidchat-plugin-gradle.git
+$ cordova plugin add --save https://github.com/bidchatindia/Bidchat-plugin-gradle
 ```
 
 
